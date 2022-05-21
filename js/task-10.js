@@ -18,6 +18,7 @@ function createBoxes() {
     box.style.background = getRandomHexColor()
     counter += 10
     boxes.push(box)
+    inputEl.value = ''
   }
   divEl.append(...boxes)
 }
@@ -27,6 +28,7 @@ function getRandomHexColor() {
 buttonElCreate.addEventListener(`click`, createBoxes)
 function destroyBoxes() {
   divEl.innerHTML = ''
+  counter = 30
 }
 
 buttonElDestroy.addEventListener(`click`, destroyBoxes)
